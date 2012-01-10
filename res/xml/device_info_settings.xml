@@ -108,6 +108,12 @@
                 android:title="@string/plain_version_title"
                 android:summary="@string/plain_version_default"/>
 
+        <!-- Build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
         <Preference android:key="rom_buildtype"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/rom_buildtype_title"
