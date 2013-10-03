@@ -19,4 +19,23 @@
     <string name="mod_version">Illusion version</string>
     <string name="mod_version_default">Unknown</string>
 
+<<<<<<< HEAD
+=======
+    <!-- Main list strings -->
+    <string name="header_category_interface">Interface</string>
+
+    <!-- Volume panel tweaks -->
+    <string name="volume_adjust_sounds_enable_title">Volume adjust sound</string>
+    <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
+    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
+    <string name="volume_ring_only_description">Ringtone</string>
+
+    <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Advanced reboot</string>
+    <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery or bootloader</string>
+
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
+
+>>>>>>> cc4fdb5... [2/2] Settings: Add lockscreen ring battery setting
 </resources>
