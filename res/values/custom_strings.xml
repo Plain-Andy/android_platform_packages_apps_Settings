@@ -19,8 +19,7 @@
     <string name="mod_version">Illusion version</string>
     <string name="mod_version_default">Unknown</string>
 
-<<<<<<< HEAD
-=======
+
     <!-- Main list strings -->
     <string name="header_category_interface">Interface</string>
 
@@ -37,5 +36,4 @@
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
 
->>>>>>> cc4fdb5... [2/2] Settings: Add lockscreen ring battery setting
 </resources>
