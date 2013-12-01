@@ -58,6 +58,20 @@
         android:fragment="com.android.settings.WirelessSettings"
         android:icon="@drawable/empty_icon" />
 
+   <!-- ROM Settings -->	
+   <header	
+       android:id="@+id/rom_settings	
+       android:title="@string/header_category_romsettings />	
+
+    <header android:id="@+id/illusion_settings"	
+            android:title="@string/illusionsettings"	
+            android:icon="@drawable/ic_illusionsettings" >	
+        <intent	
+                android:action="android.intent.action.MAIN"	
+                android:targetClass="com.illusion.settings.SettingsActivity"	
+                android:targetPackage="com.illusion.settings" />	
+    </header>
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
