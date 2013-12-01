@@ -15,6 +15,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- IllusionSettings -->
+    <string name="header_category_romsettings">ROM Settings</string>
+    <string name="illusionsettings"> Illusion Settings</string>
+
     <string name="ok">OK</string>
 
     <!-- Display settings screen, notification light settings -->
