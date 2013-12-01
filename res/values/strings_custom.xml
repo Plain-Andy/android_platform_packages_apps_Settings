@@ -352,4 +352,5 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="link_volume_mutes">Silent mode affects notifications</string>
     <string name="volume_keys_control_ring_stream">Volume keys control ringtone volume</string>
     <string name="volume_ring_only_description">Ringtone</string>
+    <string name="performance_settings">Performance</string>
 </resources>
