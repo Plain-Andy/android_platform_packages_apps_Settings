@@ -538,6 +538,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             }
         }
         resetDebuggerOptions();
+        resetRootAccessOptions();
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
         writeAnimationScaleOption(2, mAnimatorDurationScale, null);
@@ -547,7 +548,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateAllOptions();
         mDontPokeProperties = false;
         pokeSystemProperties();
-        resetRootAccessOptions();
     }
 
     void filterRuntimeOptions(Preference selectRuntime) {
@@ -1447,6 +1447,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                         Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
                 mLastEnabledState = true;
                 setPrefsEnabledState(mLastEnabledState);
+            } else {
+                // Reset the toggle
+                mEnabledSwitch.setChecked(false);
             }
         } else if (dialog == mRootDialog) {
             if (which == DialogInterface.BUTTON_POSITIVE) {
