@@ -436,6 +436,9 @@
     <!-- HTTP proxy settings. Warning message about limited application support [CHAR LIMIT=100]-->
     <string name="proxy_warning_limited_support">The HTTP proxy is used by the browser but may not be used by the other apps.</string>
 
+    <!-- HTTP proxy settings. Title for Proxy-Auto Config URL.  [CHAR LIMIT=NONE]-->
+    <string name="proxy_url">"PAC URL: "</string>
+
     <!-- Radio Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radio_info_signal_location_label">Location:</string>
     <!-- Radio Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
@@ -1223,7 +1226,7 @@
     <string name="bluetooth_dock_settings_remember">Remember settings</string>
 
     <!-- Wifi Display settings. The title of the screen. [CHAR LIMIT=40] -->
-    <string name="wifi_display_settings_title">Screen cast</string>
+    <string name="wifi_display_settings_title">Cast screen</string>
     <!-- Wifi Display settings. The title of a menu item to enable wireless display [CHAR LIMIT=40] -->
     <string name="wifi_display_enable_menu_item">Enable wireless display</string>
     <!-- Wifi Display settings. Text that appears when scanning for devices is finished and no nearby device was found [CHAR LIMIT=40]-->
@@ -1925,6 +1928,19 @@
     <string name="sim_enter_ok">OK</string>
     <!-- SIM card lock settings screen, SIM PIN dialog button labels: -->
     <string name="sim_enter_cancel">Cancel</string>
+
+    <!-- Instructions telling the user that they entered the wrong SIM PIN for the last time.
+         Displayed in a dialog box.  -->
+    <string name="wrong_pin_code_pukked">Incorrect SIM PIN code you must now contact your carrier to unlock your device.</string>
+    <!-- Instructions telling the user that they entered the wrong SIM PIN while trying
+         to unlock the keyguard.  Displayed in a dialog box.  -->
+    <plurals name="wrong_pin_code">
+        <item quantity="one">Incorrect SIM PIN code, you have <xliff:g id="number">%d</xliff:g> remaining attempt before you must contact your carrier to unlock your device.</item>
+        <item quantity="other">Incorrect SIM PIN code, you have <xliff:g id="number">%d</xliff:g> remaining attempts.</item>
+    </plurals>
+    <!-- Instructions telling the user that the operation to unlock the keyguard
+         with SIM PIN failed. Displayed in one line in a large font.  -->
+    <string name="pin_failed">SIM PIN operation failed!</string>
 
     <!-- Advanced (used for diagnostics) device info activity title -->
     <string name="device_info_settings" product="tablet">Tablet status</string>
@@ -3456,6 +3472,9 @@
     <!-- Template for the label of the state for a ongoing print job. [CHAR LIMIT=25] -->
     <string name="print_printing_state_title_template">Printing <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
 
+    <!-- Template for the label for a cancelling print job. [CHAR LIMIT=25] -->
+    <string name="print_cancelling_state_title_template" >Cancelling <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
+
     <!-- Template for the label of the state for a failed print job. [CHAR LIMIT=25] -->
     <string name="print_failed_state_title_template">Printer error <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
 
@@ -4652,7 +4671,7 @@
     <!-- Text of message to show to users whose administrator has installed a SSL CA Cert.  [CHAR LIMIT=NONE] -->
     <string name="ssl_ca_cert_info_message">This device is managed by:\n<xliff:g id="managing_domain">%s</xliff:g>\n\nYour administrator is capable of monitoring your network activity, including emails, apps, and secure websites.\n\nFor more information, contact your administrator.</string>
     <!-- Text of warning to show to users that have a SSL CA Cert installed.  [CHAR LIMIT=NONE] -->
-    <string name="ssl_ca_cert_warning_message">A third party is capable of monitoring your network\nactivity, including emails, apps, and secure websites.\n\nA trusted credential installed on your device is making this possible.</string>
+    <string name="ssl_ca_cert_warning_message">A third party is capable of monitoring your network activity, including emails, apps, and secure websites.\n\nA trusted credential installed on your device is making this possible.</string>
     <!-- Label on button that will take the user to the Trusted Credentials settings page.  [CHAR LIMIT=NONE]-->
     <string name="ssl_ca_cert_settings_button">Check trusted credentials</string>
 
