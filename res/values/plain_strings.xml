@@ -42,6 +42,14 @@
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
 
+    <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Advanced reboot</string>
+    <string name="advanced_reboot_summary">Include options in the power menu for rebooting into recovery and bootloader</string>
+    <string name="advanced_reboot_dialog_title">Advanced reboot menu</string>
+    <string name="advanced_reboot_disabled">Disable</string>
+    <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
+    <string name="advanced_reboot_show_always">Show always</string>
+
     <!-- Rom Versioning -->
     <string name="display_category_rom_versioning_title">Software build information</string>
     <string name="display_category_rom_versioning_summary">Software status of aosp version, kernel version, buildtype, etc</string>
