@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/*
- * Copyright 2013, The Android Open Kang Project
+/**
+ * Copyright (c) 2013, The Android Open Kang Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,4 +22,6 @@
     <dimen name="auto_brightness_preview_marker_size">3dip</dimen>
     <dimen name="auto_brightness_preview_grid_margin">3dip</dimen>
     <dimen name="auto_brightness_dialog_more_button_size">48dp</dimen>
+    <!-- Minimal notification row height used to calculate max notification count -->
+    <dimen name="notification_row_min_height">70dp</dimen>
 </resources>
