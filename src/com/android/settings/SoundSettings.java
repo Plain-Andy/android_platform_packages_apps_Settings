@@ -75,7 +75,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_AUDIO_SETTINGS = "dock_audio";
     private static final String KEY_DOCK_SOUNDS = "dock_sounds";
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
-
+    private static final String KEY_SAFE_HEADSET_VOLUME_WARNING = "safe_headset_volume_warning";
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
             KEY_EMERGENCY_TONE, KEY_VIBRATE
@@ -83,7 +83,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
     private static final int MSG_UPDATE_RINGTONE_SUMMARY = 1;
     private static final int MSG_UPDATE_NOTIFICATION_SUMMARY = 2;
-
+    private CheckBoxPreference mVolumeWarning;
     private CheckBoxPreference mVibrateWhenRinging;
     private CheckBoxPreference mDtmfTone;
     private CheckBoxPreference mSoundEffects;
@@ -145,9 +145,16 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             findPreference(KEY_RING_VOLUME).setDependency(null);
         }
 
+        mVolumeWarning = (CheckBoxPreference) findPreference(KEY_SAFE_HEADSET_VOLUME_WARNING);
+
         if (getResources().getBoolean(com.android.internal.R.bool.config_useFixedVolume)) {
             // device with fixed volume policy, do not display volumes submenu
             getPreferenceScreen().removePreference(findPreference(KEY_RING_VOLUME));
+            getPreferenceScreen().removePreference(findPreference(KEY_SAFE_HEADSET_VOLUME_WARNING));
+        } else {
+            mVolumeWarning.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.MANUAL_SAFE_MEDIA_VOLUME, 1) == 1);
+            mVolumeWarning.setOnPreferenceChangeListener(this);
         }
 
         mVibrateWhenRinging = (CheckBoxPreference) findPreference(KEY_VIBRATE);
@@ -350,6 +357,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist emergency tone setting", e);
             }
+        } else if (preference == mVolumeWarning) {
+            int volumeWarning = (Boolean) objValue ? 1 : 0;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.MANUAL_SAFE_MEDIA_VOLUME, volumeWarning);
         }
 
         return true;
