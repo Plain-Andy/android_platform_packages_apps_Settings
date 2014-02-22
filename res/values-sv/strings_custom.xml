@@ -26,7 +26,7 @@
   <string name="cpu_info">CPU</string>
   <string name="chipset_info">Chipset</string>
   <string name="mem_info">Minne</string>
-  <string name="mod_version">AOKP version</string>
+  <string name="mod_version">Plain version</string>
   <string name="mod_version_default">Okänd</string>
   <string name="build_date">Byggdatum</string>
   <string name="build_date_default">2012-01-01-0000</string>

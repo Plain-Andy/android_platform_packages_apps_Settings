@@ -33,9 +33,7 @@
     <string name="chipset_info">Chipset</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Memory</string>
-    <!-- About phone screen,  AOKP version name-->
-    <string name="mod_version">AOKP version</string>
-    <!-- About phone screen,  AOKP unknown name-->
+    <string name="mod_version">Plain version</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
