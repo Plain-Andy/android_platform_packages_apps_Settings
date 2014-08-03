@@ -343,4 +343,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="dynamic_system_bars_gradient_summary">Overlay a gradient on the system bars</string>
     <string name="dynamic_status_bar_filter_title">Darker status bar</string>
     <string name="dynamic_status_bar_filter_summary">Overlay a darkening filter on the status bar</string>
+
+    <!-- User Selectable Tether Networks-->
+    <string name="tether_usb_network_summary">Press to change USB Network</string>
+    <string name="tether_usb_network_text">USB Tether Network</string>
+    <string name="tether_user_network_default">Use System Default</string>
+    <string name="tether_wifi_network_text">WiFi Tether Network</string>
 </resources>
