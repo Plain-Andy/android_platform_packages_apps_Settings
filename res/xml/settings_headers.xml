@@ -53,22 +53,6 @@
         android:title="@string/data_usage_summary_title"
         android:icon="@drawable/ic_settings_data_usage" />
 
-    <!-- Operator hook -->
-    <header
-        android:fragment="com.android.settings.WirelessSettings"
-        android:id="@+id/operator_settings">
-        <intent android:action="com.android.settings.OPERATOR_APPLICATION_SETTING" />
-    </header>
-
-    <!-- Other wireless and network controls -->
-    <header
-        android:id="@+id/wireless_settings"
-        android:title="@string/radio_controls_title"
-        android:breadCrumbTitle="@string/wireless_networks_settings_title"
-        android:fragment="com.android.settings.WirelessSettings"
-        android:icon="@drawable/empty_icon" />
-
-    <!-- Quick Links -->
     <!-- Performance Controls -->
     <header
         android:id="@+id/performance_controls"
@@ -93,6 +77,21 @@
         android:breadCrumbTitle="@string/themes_settings_title"
         android:fragment="com.android.settings.ThemeSettings"
         android:icon="@drawable/prd_ic_themepacks" />
+
+    <!-- Operator hook -->
+    <header
+        android:fragment="com.android.settings.WirelessSettings"
+        android:id="@+id/operator_settings">
+        <intent android:action="com.android.settings.OPERATOR_APPLICATION_SETTING" />
+    </header>
+
+    <!-- Other wireless and network controls -->
+    <header
+        android:id="@+id/wireless_settings"
+        android:title="@string/radio_controls_title"
+        android:breadCrumbTitle="@string/wireless_networks_settings_title"
+        android:fragment="com.android.settings.WirelessSettings"
+        android:icon="@drawable/empty_icon" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
