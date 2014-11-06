@@ -57,11 +57,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DYNAMIC_NAVIGATION_BAR = "dynamic_navigation_bar";
     private static final String KEY_DYNAMIC_SYSTEM_BARS_GRADIENT = "dynamic_system_bars_gradient";
     private static final String KEY_DYNAMIC_STATUS_BAR_FILTER = "dynamic_status_bar_filter";
+    private static final String STATUS_BAR_TRAFFIC = "status_bar_traffic";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
     private CheckBoxPreference mAccelerometer;
     private FontDialogPreference mFontSizePref;
+    private CheckBoxPreference mStatusBarTraffic;
     private CheckBoxPreference mNotificationPulse;
     private CheckBoxPreference mDynamicStatusBar;
     private CheckBoxPreference mDynamicNavigationBar;
@@ -142,6 +144,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
             }
         }
+        mStatusBarTraffic = (CheckBoxPreference) findPreference(STATUS_BAR_TRAFFIC);
+        mStatusBarTraffic.setChecked(Settings.System.getInt(resolver,
+            Settings.System.STATUS_BAR_TRAFFIC, 0) == 1);
+        mStatusBarTraffic.setOnPreferenceChangeListener(this);
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -329,8 +335,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
                     value ? 1 : 0);
             return true;
-        }
- else if (preference == mDynamicStatusBar) {
+        } else if (preference == mStatusBarTraffic) {
+	    boolean value = mStatusBarTraffic.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.STATUS_BAR_TRAFFIC,
+		    value ? 1 : 0);
+            return true;
+        } else if (preference == mDynamicStatusBar) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.DYNAMIC_STATUS_BAR_STATE,
                     mDynamicStatusBar.isChecked() ? 1 : 0);
