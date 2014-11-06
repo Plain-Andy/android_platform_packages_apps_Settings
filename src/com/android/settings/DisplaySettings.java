@@ -72,12 +72,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
+    private static final String STATUS_BAR_TRAFFIC = "status_bar_traffic";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
     private WarnedListPreference mFontSizePref;
     private PreferenceCategory mWakeUpOptions;
-
     private final Configuration mCurConfig = new Configuration();
 
     private ListPreference mScreenTimeoutPreference;
@@ -86,6 +86,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mDozePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mVolumeWake;
+    private SwitchPreference mStatusBarTraffic;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -179,6 +180,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 mVolumeWake.setOnPreferenceChangeListener(this);
             }
         }
+        mStatusBarTraffic = (SwitchPreference) findPreference(STATUS_BAR_TRAFFIC);
+        mStatusBarTraffic.setChecked(Settings.System.getInt(resolver,
+            Settings.System.STATUS_BAR_TRAFFIC, 0) == 1);
+        mStatusBarTraffic.setOnPreferenceChangeListener(this);
     }
 
     private static boolean allowAllRotations(Context context) {
@@ -385,6 +390,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (KEY_VOLUME_WAKE.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_WAKE_SCREEN,
+                    (Boolean) objValue ? 1 : 0);
+        }
+        if (STATUS_BAR_TRAFFIC.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_TRAFFIC,
                     (Boolean) objValue ? 1 : 0);
         }
         if (preference == mAutoBrightnessPreference) {
