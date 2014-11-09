@@ -103,6 +103,12 @@
             android:requiredForAllUsers="true"
             android:supportsRtl="true">
 
+        <activity android:name=".orbix.ChangeLog" android:label="@string/changelog_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <!-- Only system/su can open this activity -->
         <!-- This activity will then call the MultitaskSuRequestActivity to create a new task stack -->
         <activity
