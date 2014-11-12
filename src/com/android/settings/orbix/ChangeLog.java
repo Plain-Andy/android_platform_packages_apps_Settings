@@ -69,7 +69,7 @@ public class ChangeLog extends AlertActivity {
         WebView webView = new WebView(this);
 
         // Begin the loading.  This will be done in a separate thread in WebView.
-        webView.loadDataWithBaseURL(null, data.toString(), "text/plain", "utf-8", null);
+        webView.loadDataWithBaseURL(null, data.toString(), "text/html", "utf-8", null);
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
