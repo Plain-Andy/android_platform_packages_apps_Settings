@@ -76,12 +76,6 @@
                 android:key="auto_rotate"
                 android:title="@string/display_auto_rotate_title" />
 
-	<CheckBoxPreference
-		android:key="status_bar_traffic"
-		android:title="@string/show_network_speed"
-		android:summary="@string/show_network_speed_summary"
-		android:defaultValue="false" />
-
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"

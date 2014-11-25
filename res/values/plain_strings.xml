@@ -20,10 +20,6 @@
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
-    <!-- Network speed -->
-    <string name="show_network_speed">Network speed indicator</string>
-    <string name="show_network_speed_summary">Show network speed in statusbar</string>
-
    <!-- Setting checkbox title for root access -->
     <string name="root_access">Root access</string>
     <string name="root_access_warning_title">Allow root access?</string>
