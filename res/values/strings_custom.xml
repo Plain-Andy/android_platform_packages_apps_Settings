@@ -33,8 +33,6 @@
     <string name="chipset_info">Chipset</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Memory</string>
-    <string name="mod_version">Plain version</string>
-    <string name="mod_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
@@ -410,4 +408,14 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="changelog_error">Unable to load changelog</string>
     <string name="changelog_unknown">Unknown</string>
     <string name="changelog_version">Version</string>
+
+    <!-- Rom Versioning -->
+
+    <!-- About phone screen, liquid version -->
+    <string name="plain_version_title">Plain-Andy version</string>
+    <string name="plain_version_default">Unknown</string>
+    <!-- About phone screen, rom versioning -->
+    <string name="rom_buildtype_title">Rom Buildtype</string>
+    <string name="display_category_rom_versioning_title">Software Information</string>
+    <string name="display_category_rom_versioning_summary">Software status of aosp version, kernel version, buildtype, etc</string>
 </resources>

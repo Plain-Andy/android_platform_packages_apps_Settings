@@ -63,7 +63,6 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
-    private static final String KEY_MOD_VERSION = "mod_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_DEVICE_CHIPSET = "device_chipset";
     private static final String KEY_DEVICE_CPU = "device_cpu";
@@ -72,6 +71,8 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_REAR_CAMERA = "device_rear_camera";
     private static final String KEY_DEVICE_FRONT_CAMERA = "device_front_camera";
     private static final String KEY_DEVICE_SCREEN_RESOLUTION = "device_screen_resolution";
+    private static final String KEY_PLAIN_VERSION = "plain_version";
+    private static final String KEY_ROM_BUILDTYPE = "rom_buildtype";
 
     long[] mHits = new long[3];
 
@@ -95,11 +96,10 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL + getMsvSuffix());
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
-        setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
+        setValueSummary(KEY_BUILD_NUMBER, "ro.build.id");
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
-        setValueSummary(KEY_MOD_VERSION, "ro.plain.version");
-        findPreference(KEY_MOD_VERSION).setEnabled(true);
+        setValueSummary(KEY_PLAIN_VERSION, "ro.plain.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         addStringPreference(KEY_DEVICE_CHIPSET,
@@ -115,6 +115,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
                 SystemProperties.get("ro.device.rear_cam", null));
         addStringPreference(KEY_DEVICE_SCREEN_RESOLUTION,
                 SystemProperties.get("ro.device.screen_res", null));
+        setValueSummary(KEY_ROM_BUILDTYPE, "rom.buildtype");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -179,7 +180,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
                     Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
                 }
             }
-        } else if (prefKey.equals(KEY_MOD_VERSION)) {
+        } else if (prefKey.equals(KEY_PLAIN_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {

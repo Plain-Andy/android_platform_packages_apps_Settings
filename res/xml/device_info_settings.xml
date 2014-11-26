@@ -17,14 +17,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <!-- Change Log -->
-        <PreferenceScreen android:key="changelog"
-            android:title="@string/changelog_title">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.orbix.ChangeLog" />
-        </PreferenceScreen>
-
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 
@@ -70,6 +62,19 @@
         <PreferenceScreen
             android:key="hardware_info"
             android:title="@string/hardware_info">
+            
+	    <!-- Device hardware model -->
+            <Preference android:key="device_model" 
+                style="?android:preferenceInformationStyle"
+                android:title="@string/model_number"
+                android:summary="@string/device_info_default"/>
+
+	    <!-- Device Baseband version -->
+            <Preference android:key="baseband_version" 
+                style="?android:preferenceInformationStyle"
+                android:title="@string/baseband_version"
+                android:summary="@string/device_info_default"/>
+
             <!-- Device chipset -->
             <Preference android:key="device_chipset"
                 style="?android:preferenceInformationStyle"
@@ -131,53 +136,55 @@
             <intent android:action="android.settings.SHOW_REGULATORY_INFO" />
         </PreferenceScreen>
 
-        <!-- Device hardware model -->
-        <Preference android:key="device_model" 
+        <!-- Plain-Andy version -->
+        <PreferenceScreen
+             android:key="category_rom_versioning"
+             android:title="@string/display_category_rom_versioning_title">
+
+        <!-- Change Log -->
+        <PreferenceScreen android:key="changelog"
+            android:title="@string/changelog_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.orbix.ChangeLog" />
+        </PreferenceScreen>
+
+        <Preference android:key="plain_version"
                 style="?android:preferenceInformationStyle"
-                android:title="@string/model_number"
+                android:title="@string/plain_version_title"
+                android:summary="@string/plain_version_default"/>
+
+        <Preference android:key="rom_buildtype"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/rom_buildtype_title"
+                android:summary="@string/plain_version_default"/>
+
+        <!-- Detailed build version -->
+        <Preference android:key="build_number"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
-                
+
         <!-- Device firmware version -->
         <Preference android:key="firmware_version" 
                 style="?android:preferenceInformationStyle"
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
 
+        <!-- Device Kernel version -->
+        <Preference android:key="kernel_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/kernel_version"
+                android:summary="@string/device_info_default"/>
+
+        </PreferenceScreen>
+                
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/fcc_equipment_id"
                 android:summary="@string/device_info_default"/>
 
-        <!-- Device Baseband version -->
-        <Preference android:key="baseband_version" 
-                style="?android:preferenceInformationStyle"
-                android:title="@string/baseband_version"
-                android:summary="@string/device_info_default"/>
-        
-        <!-- Device Kernel version -->
-        <Preference android:key="kernel_version" 
-                style="?android:preferenceInformationStyle"
-                android:title="@string/kernel_version"
-                android:summary="@string/device_info_default"/>
-
-        <!-- Mod version -->
-        <Preference android:key="mod_version"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/mod_version"
-                android:summary="@string/mod_version_default" />
-
-        <!-- Mod build date -->
-        <Preference android:key="build_date"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/build_date"
-                android:summary="@string/build_date_default" />
-
-        <!-- Detailed build version -->
-        <Preference android:key="build_number" 
-                style="?android:preferenceInformationStyle"
-                android:title="@string/build_number"
-                android:summary="@string/device_info_default"/>
 
         <!-- SELinux status information -->
         <Preference android:key="selinux_status"
