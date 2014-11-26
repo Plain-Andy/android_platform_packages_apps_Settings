@@ -33,4 +33,8 @@
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
 
+    <!-- Rom Versioning -->
+    <string name="display_category_rom_versioning_title">Rom Build Information</string>
+    <string name="display_category_rom_versioning_summary">Software status of aosp version, kernel version, buildtype, etc</string>
+
 </resources>
