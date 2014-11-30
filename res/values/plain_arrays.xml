@@ -30,10 +30,4 @@
         <item>3</item>
     </string-array>
 
-    <!-- About phone screen, liquid version -->
-    <string name="plain_version_title">Plain-Andy version</string>
-    <string name="plain_version_default">Unknown</string>
-    <!-- About phone screen, rom versioning -->
-    <string name="rom_buildtype_title">Rom Buildtype</string>
-
 </resources>

@@ -81,6 +81,11 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_PLAIN_VERSION = "plain_version";
     private static final String KEY_ROM_BUILDTYPE = "rom_buildtype";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
+    private static final String KEY_PLAINTWEAK_GOV = "plain_tweak_gov";
+    private static final String KEY_PLAINTWEAK_SCHED = "plain_tweak_scheduler";
+    private static final String KEY_PLAINTWEAK_MAX = "plain_tweak_maxkhz";
+    private static final String KEY_PLAINTWEAK_MIN = "plain_tweak_minkhz";
+    private static final String KEY_PLAINTWEAK_TCP = "plain_tweak_tcpcong";
 
     /* Reduced taps from 7 to 3 for developer options */
     static final int TAPS_TO_BE_A_DEVELOPER = 3;
@@ -107,6 +112,11 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setValueSummary(KEY_PLAIN_VERSION, "ro.plain.version");
         setValueSummary(KEY_ROM_BUILDTYPE, "rom.buildtype");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_PLAINTWEAK_GOV, "gov");
+        setValueSummary(KEY_PLAINTWEAK_SCHED, "scheduler");
+        setValueSummary(KEY_PLAINTWEAK_MAX, "maxkhz");
+        setValueSummary(KEY_PLAINTWEAK_MIN, "minkhz");
+        setValueSummary(KEY_PLAINTWEAK_TCP, "tcpcong");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);

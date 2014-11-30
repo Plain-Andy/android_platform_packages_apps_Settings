@@ -36,8 +36,20 @@
     <!-- Rom Versioning -->
     <string name="display_category_rom_versioning_title">Software build information</string>
     <string name="display_category_rom_versioning_summary">Software status of aosp version, kernel version, buildtype, etc</string>
+    <string name="rom_buildtype_title">Rom Buildtype</string>
     <!-- Build date -->
     <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
-
+    <!-- About phone screen, Plain-Andy version -->
+    <string name="plain_version_title">Plain-Andy version</string>
+    <string name="plain_version_default">Unknown</string>
+    <!-- Plain-Tweak value headers -->
+    <string name="plain_tweak_title">Plain-Tweak</string>
+    <string name="plain_tweak_summary">Currently set kernel values obtained from Plain-Tweak</string>
+    <string name="plain_tweak_default">Unknown or Unset</string>
+    <string name="plain_tweak_gov">Governor</string>
+    <string name="plain_tweak_scheduler">IO Scheduler</string>
+    <string name="plain_tweak_maxkhz">Max CPU Clockrate</string>
+    <string name="plain_tweak_minkhz">Min CPU Clockrate</string>
+    <string name="plain_tweak_tcpcong">TCP Congestion Control Algorithm</string>
 </resources>

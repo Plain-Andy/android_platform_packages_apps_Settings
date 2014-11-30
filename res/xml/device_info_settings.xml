@@ -130,6 +130,38 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/kernel_version"
                 android:summary="@string/device_info_default"/>
+        </PreferenceScreen>
+
+        <!-- Plain-Tweak Information -->
+        <PreferenceScreen
+             android:key="category_plain_tweak_information"
+             android:title="@string/plain_tweak_title"
+             android:summary="@string/plain_tweak_summary">
+
+        <Preference android:key="plain_tweak_maxkhz"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_maxkhz"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_minkhz"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_minkhz"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_gov"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_gov"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_scheduler"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_scheduler"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_tcpcong"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_tcpcong"
+                android:summary="@string/plain_tweak_default"/>
 
         </PreferenceScreen>
 
