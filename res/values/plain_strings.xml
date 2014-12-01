@@ -52,6 +52,14 @@
     <string name="plain_tweak_maxkhz">Max CPU Clockrate</string>
     <string name="plain_tweak_minkhz">Min CPU Clockrate</string>
     <string name="plain_tweak_tcpcong">TCP Congestion Control Algorithm</string>
-    <!-- CPU Spy Time-In-State -->
+    <!-- CPU Spy -->
     <string name="cpuspy_monitor">CPU Spy</string>
+    <string name="app_name">CPU Spy</string>
+    <string name="version_name">dev</string>
+    <string name="time_in_state">Time In State</string>
+    <string name="ui_states_warning">No states file found. Are you sure your phone is compatible?\n\nIf you are running a custom ROM or kernel, try contacting its developer to inform him that the states file is not readable.</string>
+    <string name="ui_header_additional_states">Unused CPU states</string>
+    <string name="ui_header_total_state_time">Total State Time</string>
+    <string name="kernel_cpuspy">Kernel Info</string>
+    <string name="ui_kernel_string">Kernel</string>
 </resources>
