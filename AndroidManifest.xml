@@ -1964,6 +1964,12 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".bvalosek.CpuStateMonitor" android:label="@string/cpuspy_monitor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+	</activity>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.android.settings.files"

@@ -52,4 +52,6 @@
     <string name="plain_tweak_maxkhz">Max CPU Clockrate</string>
     <string name="plain_tweak_minkhz">Min CPU Clockrate</string>
     <string name="plain_tweak_tcpcong">TCP Congestion Control Algorithm</string>
+    <!-- CPU Spy Time-In-State -->
+    <string name="cpuspy_monitor">CPU Spy</string>
 </resources>
