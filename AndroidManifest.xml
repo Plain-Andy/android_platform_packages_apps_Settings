@@ -1964,6 +1964,16 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".bvalosek.CpuStateMonitor">
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+	</activity>
+        <activity android:name=".bvalosek.CpuSpyApp">
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+	</activity>
         <activity android:name=".bvalosek.ui.HomeActivity" android:label="@string/cpuspy_monitor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

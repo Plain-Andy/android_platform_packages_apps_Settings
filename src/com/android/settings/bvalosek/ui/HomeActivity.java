@@ -96,7 +96,7 @@ public class HomeActivity extends Activity
         _uiTotalStateTime = (TextView)findViewById(R.id.ui_total_state_time);
     }
 
-    /** called when we want to infalte the menu */
+    /** called when we want to infalte the menu 
     @Override public boolean onCreateOptionsMenu(Menu menu) {
         // request inflater from activity and inflate into its menu
         MenuInflater inflater = getMenuInflater();
@@ -104,7 +104,7 @@ public class HomeActivity extends Activity
 
         // made it
         return true;
-    }
+    }*/
 
     /** called to handle a menu event */
     @Override public boolean onOptionsItemSelected(MenuItem item) {
