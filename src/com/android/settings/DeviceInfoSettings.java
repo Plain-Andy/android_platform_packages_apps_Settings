@@ -71,8 +71,14 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_REAR_CAMERA = "device_rear_camera";
     private static final String KEY_DEVICE_FRONT_CAMERA = "device_front_camera";
     private static final String KEY_DEVICE_SCREEN_RESOLUTION = "device_screen_resolution";
+    private static final String KEY_DEVICE_SCREEN_SIZE = "device_screen_size";
     private static final String KEY_PLAIN_VERSION = "plain_version";
     private static final String KEY_ROM_BUILDTYPE = "rom_buildtype";
+    private static final String KEY_PLAINTWEAK_GOV = "plain_tweak_gov";
+    private static final String KEY_PLAINTWEAK_SCHED = "plain_tweak_scheduler";
+    private static final String KEY_PLAINTWEAK_MAX = "plain_tweak_maxkhz";
+    private static final String KEY_PLAINTWEAK_MIN = "plain_tweak_minkhz";
+    private static final String KEY_PLAINTWEAK_TCP = "plain_tweak_tcpcong";
 
     long[] mHits = new long[3];
 
@@ -101,21 +107,28 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_PLAIN_VERSION, "ro.plain.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_PLAINTWEAK_GOV, "gov");
+        setValueSummary(KEY_PLAINTWEAK_SCHED, "scheduler");
+        setValueSummary(KEY_PLAINTWEAK_MAX, "maxkhz");
+        setValueSummary(KEY_PLAINTWEAK_MIN, "minkhz");
+        setValueSummary(KEY_PLAINTWEAK_TCP, "tcpcong");
+        setValueSummary(KEY_ROM_BUILDTYPE, "rom.buildtype");
 
         addStringPreference(KEY_DEVICE_CHIPSET,
-                SystemProperties.get("ro.device.chipset", null));
+                SystemProperties.get("ro.product.chipset", null));
         addStringPreference(KEY_DEVICE_CPU,
-                SystemProperties.get("ro.device.cpu", getCPUInfo()));
+                SystemProperties.get("ro.product.cpu", getCPUInfo()));
         addStringPreference(KEY_DEVICE_GPU,
-                SystemProperties.get("ro.device.gpu", null));
+                SystemProperties.get("ro.product.gpu", null));
         addStringPreference(KEY_DEVICE_MEMORY, getMemInfo());
         addStringPreference(KEY_DEVICE_FRONT_CAMERA,
-                SystemProperties.get("ro.device.front_cam", null));
+                SystemProperties.get("ro.product.front_cam", null));
         addStringPreference(KEY_DEVICE_REAR_CAMERA,
-                SystemProperties.get("ro.device.rear_cam", null));
+                SystemProperties.get("ro.product.rear_cam", null));
+        addStringPreference(KEY_DEVICE_SCREEN_SIZE,
+                SystemProperties.get("ro.product.screen_size", null));
         addStringPreference(KEY_DEVICE_SCREEN_RESOLUTION,
-                SystemProperties.get("ro.device.screen_res", null));
-        setValueSummary(KEY_ROM_BUILDTYPE, "rom.buildtype");
+                SystemProperties.get("ro.product.screen_res", null));
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);

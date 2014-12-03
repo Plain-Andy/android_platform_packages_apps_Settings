@@ -18,13 +18,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--  About device screen, Hardware info -->
-    <string name="hardware_info">Hardware info</string>
+    <string name="hardware_info">Hardware Information</string>
     <!--  About device Screen, hardware info, rear camera -->
     <string name="device_rear_camera">Rear camera</string>
     <!--  About device Screen, hardware info, front camera -->
     <string name="device_front_camera">Front facing camera</string>
     <!--  About device Screen, hardware info, screen res -->
     <string name="device_screen_resolution">Screen resolution</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_size">Screen size</string>
     <!--  About device Screen, hardware info, GPU info -->
     <string name="gpu_info">GPU</string>
     <!-- About device screen, Cpu info. -->
@@ -418,4 +420,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="rom_buildtype_title">Rom Buildtype</string>
     <string name="display_category_rom_versioning_title">Software Information</string>
     <string name="display_category_rom_versioning_summary">Software status of aosp version, kernel version, buildtype, etc</string>
+    <!-- Plain-Tweak value headers -->
+    <string name="plain_tweak_title">Plain-Tweak</string>
+    <string name="plain_tweak_summary">Current configuration values</string>
+    <string name="plain_tweak_default">Unknown or Unset</string>
+    <string name="plain_tweak_gov">Governor</string>
+    <string name="plain_tweak_scheduler">IO Scheduler</string>
+    <string name="plain_tweak_maxkhz">Maximum CPU Clockrate</string>
+    <string name="plain_tweak_minkhz">Minimum CPU Clockrate</string>
+    <string name="plain_tweak_tcpcong">TCP Congestion Control Algorithm</string>
 </resources>

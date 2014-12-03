@@ -109,6 +109,11 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/device_front_camera"/>
 
+            <!-- Device screen size -->
+            <Preference android:key="device_screen_size"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/device_screen_size"/>
+
             <!-- Device screen resolution -->
             <Preference android:key="device_screen_resolution"
                 style="?android:preferenceInformationStyle"
@@ -178,7 +183,39 @@
                 android:summary="@string/device_info_default"/>
 
         </PreferenceScreen>
-                
+
+        <!-- Plain-Tweak Information -->
+        <PreferenceScreen
+             android:key="category_plain_tweak_information"
+             android:title="@string/plain_tweak_title"
+             android:summary="@string/plain_tweak_summary">
+
+        <Preference android:key="plain_tweak_maxkhz"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_maxkhz"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_minkhz"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_minkhz"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_gov"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_gov"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_scheduler"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_scheduler"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_tcpcong"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_tcpcong"
+                android:summary="@string/plain_tweak_default"/>
+        </PreferenceScreen>
+
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
                 style="?android:preferenceInformationStyle"
