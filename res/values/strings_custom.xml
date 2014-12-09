@@ -424,9 +424,32 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="plain_tweak_title">Plain-Tweak</string>
     <string name="plain_tweak_summary">Current configuration values</string>
     <string name="plain_tweak_default">Unknown or Unset</string>
-    <string name="plain_tweak_gov">Governor</string>
-    <string name="plain_tweak_scheduler">IO Scheduler</string>
-    <string name="plain_tweak_maxkhz">Maximum CPU Clockrate</string>
-    <string name="plain_tweak_minkhz">Minimum CPU Clockrate</string>
-    <string name="plain_tweak_tcpcong">TCP Congestion Control Algorithm</string>
+
+    <string name="plain_tweak_maxkhz_title">Maximum CPU Clockrate</string>
+    <string name="plain_tweak_maxkhz">Cores 1/2</string>
+    <string name="plain_tweak_maxkhz2">Cores 3/4</string>
+    <string name="stock_maxkhz">Stock</string>
+
+    <string name="plain_tweak_minkhz_title">Minimum CPU Clockrate</string>
+    <string name="plain_tweak_minkhz">Cores 1/2</string>
+    <string name="plain_tweak_minkhz2">Cores 3/4</string>
+    <string name="stock_minkhz">Stock</string>
+
+    <string name="plain_tweak_gov_title">Governor</string>
+    <string name="plain_tweak_gov">Cores 1/2</string>
+    <string name="plain_tweak_gov2">Cores 3/4</string>
+    <string name="stock_gov">Stock</string>
+
+    <string name="plain_tweak_scheduler_title">IO Scheduler</string>
+    <string name="plain_tweak_scheduler">Current</string>
+    <string name="stock_scheduler">Stock</string>
+
+    <string name="plain_tweak_tcpcong_title">TCP Congestion Control Algorithm</string>
+    <string name="plain_tweak_tcpcong">Current</string>
+    <string name="stock_tcpcong">Stock</string>
+
+    <string name="plain_tweak_density_title">LCD Density</string>
+    <string name="current_density">Current</string>
+    <string name="custom_density">Custom</string>
+    <string name="stock_density">Stock</string>
 </resources>

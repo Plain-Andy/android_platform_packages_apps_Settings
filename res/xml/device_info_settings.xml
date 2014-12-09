@@ -164,6 +164,10 @@
                 android:title="@string/rom_buildtype_title"
                 android:summary="@string/plain_version_default"/>
 
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"/>
+
         <!-- Detailed build version -->
         <Preference android:key="build_number"
                 style="?android:preferenceInformationStyle"
@@ -190,30 +194,119 @@
              android:title="@string/plain_tweak_title"
              android:summary="@string/plain_tweak_summary">
 
+        <PreferenceCategory
+             android:key="plain_tweak_density_title"
+             android:title="@string/plain_tweak_density_title">
+
+        <Preference android:key="current_density"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/current_density"/>
+
+        <Preference android:key="custom_density"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/custom_density"/>
+
+        <Preference android:key="stock_density"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/stock_density"/>
+
+	</PreferenceCategory>
+
+        <PreferenceCategory
+             android:key="plain_tweak_maxkhz_title"
+             android:title="@string/plain_tweak_maxkhz_title">
+
         <Preference android:key="plain_tweak_maxkhz"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/plain_tweak_maxkhz"
                 android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_maxkhz2"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_maxkhz2"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="stock_maxkhz"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/stock_maxkhz"
+                android:summary="@string/plain_tweak_default"/>
+
+	</PreferenceCategory>
+
+        <PreferenceCategory
+             android:key="plain_tweak_minkhz_title"
+             android:title="@string/plain_tweak_minkhz_title">
 
         <Preference android:key="plain_tweak_minkhz"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/plain_tweak_minkhz"
                 android:summary="@string/plain_tweak_default"/>
 
+        <Preference android:key="plain_tweak_minkhz2"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_minkhz2"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="stock_minkhz"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/stock_minkhz"
+                android:summary="@string/plain_tweak_default"/>
+
+	</PreferenceCategory>
+
+        <PreferenceCategory
+             android:key="plain_tweak_gov_title"
+             android:title="@string/plain_tweak_gov_title">
+
         <Preference android:key="plain_tweak_gov"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/plain_tweak_gov"
                 android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="plain_tweak_gov2"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/plain_tweak_gov2"
+                android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="stock_gov"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/stock_gov"
+                android:summary="@string/plain_tweak_default"/>
+
+	</PreferenceCategory>
+
+        <PreferenceCategory
+             android:key="plain_tweak_scheduler_title"
+             android:title="@string/plain_tweak_scheduler_title">
 
         <Preference android:key="plain_tweak_scheduler"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/plain_tweak_scheduler"
                 android:summary="@string/plain_tweak_default"/>
 
+        <Preference android:key="stock_scheduler"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/stock_scheduler"
+                android:summary="@string/plain_tweak_default"/>
+
+	</PreferenceCategory>
+
+        <PreferenceCategory
+             android:key="plain_tweak_tcpcong_title"
+             android:title="@string/plain_tweak_tcpcong_title">
+
         <Preference android:key="plain_tweak_tcpcong"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/plain_tweak_tcpcong"
                 android:summary="@string/plain_tweak_default"/>
+
+        <Preference android:key="stock_tcpcong"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/stock_tcpcong"
+                android:summary="@string/plain_tweak_default"/>
+
+	</PreferenceCategory>
+
         </PreferenceScreen>
 
         <!-- Device FCC equipment id -->

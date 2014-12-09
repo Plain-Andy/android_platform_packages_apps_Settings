@@ -75,10 +75,21 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_PLAIN_VERSION = "plain_version";
     private static final String KEY_ROM_BUILDTYPE = "rom_buildtype";
     private static final String KEY_PLAINTWEAK_GOV = "plain_tweak_gov";
-    private static final String KEY_PLAINTWEAK_SCHED = "plain_tweak_scheduler";
+    private static final String KEY_PLAINTWEAK_GOV2 = "plain_tweak_gov2";
     private static final String KEY_PLAINTWEAK_MAX = "plain_tweak_maxkhz";
+    private static final String KEY_PLAINTWEAK_MAX2 = "plain_tweak_maxkhz2";
     private static final String KEY_PLAINTWEAK_MIN = "plain_tweak_minkhz";
+    private static final String KEY_PLAINTWEAK_MIN2 = "plain_tweak_minkhz2";
+    private static final String KEY_PLAINTWEAK_SCHED = "plain_tweak_scheduler";
     private static final String KEY_PLAINTWEAK_TCP = "plain_tweak_tcpcong";
+    private static final String KEY_STOCK_GOV = "stock_gov";
+    private static final String KEY_STOCK_SCHED = "stock_scheduler";
+    private static final String KEY_STOCK_MAX = "stock_maxkhz";
+    private static final String KEY_STOCK_MIN = "stock_minkhz";
+    private static final String KEY_STOCK_TCP = "stock_tcpcong";
+    private static final String KEY_MOD_CURRENT_DENSITY = "current_density";
+    private static final String KEY_MOD_STOCK_DENSITY = "stock_density";
+    private static final String KEY_MOD_CUSTOM_DENSITY = "custom_density";
 
     long[] mHits = new long[3];
 
@@ -107,11 +118,22 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_PLAIN_VERSION, "ro.plain.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
-        setValueSummary(KEY_PLAINTWEAK_GOV, "gov");
+        setValueSummary(KEY_MOD_CURRENT_DENSITY, "ro.sf.lcd_density");
+        setValueSummary(KEY_MOD_STOCK_DENSITY, "stockdensity");
+        setValueSummary(KEY_MOD_CUSTOM_DENSITY, "customdensity");
         setValueSummary(KEY_PLAINTWEAK_SCHED, "scheduler");
+        setValueSummary(KEY_PLAINTWEAK_GOV, "gov");
+        setValueSummary(KEY_PLAINTWEAK_GOV2, "gov2");
         setValueSummary(KEY_PLAINTWEAK_MAX, "maxkhz");
+        setValueSummary(KEY_PLAINTWEAK_MAX2, "maxkhz2");
         setValueSummary(KEY_PLAINTWEAK_MIN, "minkhz");
+        setValueSummary(KEY_PLAINTWEAK_MIN2, "minkhz2");
         setValueSummary(KEY_PLAINTWEAK_TCP, "tcpcong");
+        setValueSummary(KEY_STOCK_GOV, "stockgov");
+        setValueSummary(KEY_STOCK_SCHED, "stockscheduler");
+        setValueSummary(KEY_STOCK_MAX, "stockmaxkhz");
+        setValueSummary(KEY_STOCK_MIN, "stockminkhz");
+        setValueSummary(KEY_STOCK_TCP, "stocktcpcong");
         setValueSummary(KEY_ROM_BUILDTYPE, "rom.buildtype");
 
         addStringPreference(KEY_DEVICE_CHIPSET,
